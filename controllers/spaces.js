@@ -26,7 +26,7 @@ exports.readAll = function(req, res){
 
 exports.singleRead = function(req, res){
   var id = req.param('id');
-  Space.find({_id: id}, function(err, space){
+  Space.findById(id, function(err, space){
       if(err) console.log(err);
       else{
           console.log("Read Space with id: \'" + id + "\'");
@@ -50,5 +50,13 @@ exports.update = function(req, res){
 };
 
 exports.delete = function(req, res){
-  res.send("Delete Single Space " + req.param('id'));
+  var id = req.param('id');
+  Space.findById(id, function(err, space){
+      space.remove(function(err){
+          if(err) console.log(err)
+          else {
+              return res.send("Space with id:" + id + " is removed");
+          }
+      })
+  })
 };

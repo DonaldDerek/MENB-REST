@@ -8,5 +8,5 @@ module.exports = function(app){
     app.get('/api/spaces/',spaces.readAll);
     app.get('/api/spaces/:id',spaces.singleRead);
     app.put('/api/spaces/:id', spaces.update);
-    app.del('/api/spaces/:id',spaces.delete);
+    app.delete('/api/spaces/:id',spaces.delete);
 }
