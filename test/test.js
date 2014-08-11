@@ -85,7 +85,7 @@ addSpace(space3,function(data){
     });
 });
 */
-for(var i=0; i< 500; i++){
+for(var i=0; i< 10000; i++){
     var iSpace = {
         name: 'chalex'+i,
         private: false,
@@ -95,6 +95,6 @@ for(var i=0; i< 500; i++){
         }
     }
     addSpace(iSpace,function(data){
-        
+
     });
 }
