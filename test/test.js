@@ -71,7 +71,7 @@ function delSingle(id, callback){
 console.log("PeerSpace REST API simulation");
 console.log("*****************************\n");
 
-addSpace(space1,function(data){
+/*addSpace(space1,function(data){
     var id = data._id;
     updateSingle(id, space2, function(data){
 
@@ -84,3 +84,17 @@ addSpace(space3,function(data){
         getAll();
     });
 });
+*/
+for(var i=0; i< 500; i++){
+    var iSpace = {
+        name: 'chalex'+i,
+        private: false,
+        meta: {
+            rooms: i,
+            desks: 6
+        }
+    }
+    addSpace(iSpace,function(data){
+        
+    });
+}

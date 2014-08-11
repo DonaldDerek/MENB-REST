@@ -15,13 +15,16 @@ exports.create = function(req, res){
 };
 
 exports.readAll = function(req, res){
-    Space.find(function(err, spaces){
+    var skip = req.query.skip || 0;
+    var limit = req.query.limit || 200;
+    console.log(skip + " " + limit);
+    Space.find(null,null,{ skip: skip, limit: limit },function(err, spaces){
         if(err) console.log(err);
         else{
             console.log("Read All Spaces");
             return res.send(spaces);
         }
-    })
+    });
 }
 
 exports.singleRead = function(req, res){
