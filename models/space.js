@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var spaceSchema = new Schema({
-  name:  String,
+  name:  {type: String, unique: true, lowercase:true},
   date: { type: Date, default: Date.now },
   private: Boolean,
   meta: {

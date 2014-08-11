@@ -36,7 +36,17 @@ exports.singleRead = function(req, res){
 };
 
 exports.update = function(req, res){
-  res.send("Update Single Space " + req.param('id'));
+    var id = req.param('id');
+    Space.findById(id, function(err, space){
+        space.name = req.body.name;
+        space.private = req.body.private;
+        space.meta = req.body.meta;
+        space.save(function(err){
+            if(err) console.log(err);
+            else
+                return res.send(space);
+        });
+    });
 };
 
 exports.delete = function(req, res){
