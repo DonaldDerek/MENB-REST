@@ -63,3 +63,12 @@ exports.delete = function(req, res){
       })
   })
 };
+
+exports.search = function(req, res){
+    var skip = req.query.skip || 0;
+    var limit = req.query.limit || 200;
+    var regex = new RegExp(req.query.q, 'i');
+    return Space.find({name: regex},null,{ skip: skip, limit: limit }, function(err,q){
+        return res.send(q);
+    });
+}
