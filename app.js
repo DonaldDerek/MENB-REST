@@ -31,5 +31,5 @@ require('./config/express')(app, config)
 require('./config/routes')(app);
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('PeerSpace API on port ' + app.get('port'));
+  console.log('MENB-REST API running on port ' + app.get('port'));
 });

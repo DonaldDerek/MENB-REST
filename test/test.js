@@ -68,7 +68,7 @@ function delSingle(id, callback){
 }
 
 
-console.log("PeerSpace REST API simulation");
+console.log("MENB-REST-API simulation");
 console.log("*****************************\n");
 
 /*addSpace(space1,function(data){

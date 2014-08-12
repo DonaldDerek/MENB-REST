@@ -2,7 +2,7 @@ var spaces = require('../controllers/spaces');
 
 module.exports = function(app){
     app.get('/',function(req, res){
-        res.send("The PeerSpace API is on!");
+        res.send("The MENB REST API is on!");
     });
     app.post('/api/spaces',spaces.create);
     app.get('/api/spaces/',spaces.readAll);

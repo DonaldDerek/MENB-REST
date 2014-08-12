@@ -1,4 +1,18 @@
-## PeerSpace REST API
+## MENB-REST API
+Mongoose Express Node Boilerplate.
+
+### Install & Run
+```
+git clone https://github.com/DonaldDerek/MENB-REST.git
+cd MENB-REST/
+npm install
+npm start
+```
+
+make sure to run MongoDB Daemon
+```
+mongod
+```
 
 ### Entry Points
 Method | Resource | Description

@@ -3,17 +3,17 @@ var rootPath = path.normalize(__dirname + '/..');
 
 module.exports = {
   dev: {
-      db: 'mongodb://localhost/peerspace',
+      db: 'mongodb://localhost/menb',
       root: rootPath,
       app: {
-        name: 'PeerSpace REST API - DEV'
+        name: 'MENB-REST-API-DEV'
       }
   },
   prod: {
       db: 'mongodb://',
       root: rootPath,
       app: {
-        name: 'PeerSpace REST API'
+        name: 'MENB-REST-API'
       }
   }
 }
